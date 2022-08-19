@@ -6,10 +6,13 @@ use App\Controllers\BaseController;
 
 class Testes extends BaseController
 {
-    public function index()
-    {
-        
-        return view('Testes/index');
+    public function index() {
+
+        $data = [
+            'titulo' => 'Curso de como fazer um sistema de entrega de comida com Codeignite4',
+            'subtitulo' => 'Muito massa conhecer a nova versão do Codeigniter 4',
+        ];
+        return view('Testes/index', $data);
 
     }
 

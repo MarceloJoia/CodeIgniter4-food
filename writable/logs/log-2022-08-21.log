@@ -1,0 +1,33 @@
+CRITICAL - 2022-08-21 16:22:00 --> Undefined variable: data
+in APPPATH\Views\Admin\home\index.php on line 1.
+ 1 APPPATH\Views\Admin\home\index.php(1): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\Admin\\home\\index.php', 1, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Home/index', [], true)
+ 5 APPPATH\Controllers\Admin\Home.php(12): view('Admin/Home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-21 16:24:24 --> Undefined variable: data
+in APPPATH\Views\Admin\home\index.php on line 3.
+ 1 APPPATH\Views\Admin\home\index.php(3): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\Admin\\home\\index.php', 3, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Home/index', [], true)
+ 5 APPPATH\Controllers\Admin\Home.php(12): view('Admin/Home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-21 16:41:38 --> Undefined variable: data
+in APPPATH\Views\Admin\home\index.php on line 8.
+ 1 APPPATH\Views\Admin\home\index.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\Admin\\home\\index.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Home/index', [], true)
+ 5 APPPATH\Controllers\Admin\Home.php(12): view('Admin/Home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

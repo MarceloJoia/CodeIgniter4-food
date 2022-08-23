@@ -9,5 +9,9 @@ class UsuarioModel extends Model
     protected $table            = 'usuarios';
     protected $returnType       = 'object';
     protected $useSoftDeletes   = true;
-    protected $allowedFields    = ['name', 'email', 'telefone'];
+    protected $allowedFields    = ['name', 'email', 'cpf', 'telefone'];
+    protected $useTimestamps    = true;
+    protected $createdField     = 'criado_em';
+    protected $updatedField     = 'atualizado_em'; 
+    protected $deletedField     = 'deletado_em';
 }

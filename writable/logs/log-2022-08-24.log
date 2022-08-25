@@ -1,0 +1,152 @@
+CRITICAL - 2022-08-24 19:19:57 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:21:03 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:21:04 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:21:55 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:21:57 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:21:57 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:23:20 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:23:21 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:23:57 --> Cannot use [] for reading
+in APPPATH\Controllers\Admin\Usuarios.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:24:25 --> Undefined offset: 1
+in APPPATH\Controllers\Admin\Usuarios.php on line 22.
+ 1 APPPATH\Controllers\Admin\Usuarios.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 1', 'APPPATH\\Controllers\\Admin\\Usuarios.php', 22, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:25:45 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:26:48 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:28:10 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:29:40 --> Invalid file: Admin/Usuarios/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 3 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Usuarios/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:40:48 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\Admin\Asuarios\index.php on line 36.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Asuarios/index', [], true)
+ 4 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Asuarios/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:41:02 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\Admin\Asuarios\index.php on line 36.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Asuarios/index', [], true)
+ 4 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Asuarios/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-24 19:42:12 --> Undefined property: stdClass::$nome
+in APPPATH\Views\Admin\Asuarios\index.php on line 36.
+ 1 APPPATH\Views\Admin\Asuarios\index.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$nome', 'APPPATH\\Views\\Admin\\Asuarios\\index.php', 36, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\Asuarios\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Admin/Asuarios/index', [], true)
+ 5 APPPATH\Controllers\Admin\Usuarios.php(22): view('Admin/Asuarios/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -4,6 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Models\UsuarioModel;
+use CodeIgniter\HTTP\Response;
 
 class Usuarios extends BaseController
 {
@@ -30,9 +31,17 @@ class Usuarios extends BaseController
         if(!$this->request->isAJAX()){
             exit('Página não encontrada.');
         }
-        echo "<pre>";
-        print_r($this->request->getGet());
-        echo "</pre>";
-        exit;
+
+        $usuarios = $this->usuarioModel->procurar($this->request->getGet('term'));
+
+        $retorno = [];
+        foreach($usuarios as $usuario){
+            $data['id'] = $usuario->id;
+            $data['value'] = $usuario->name;
+
+            $retorno = $data;
+        }
+
+        return $this->response->setJSON($retorno);
     }
 }

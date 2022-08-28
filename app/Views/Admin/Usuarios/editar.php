@@ -21,8 +21,22 @@
                 <h4 class="card-title text-white"><?= esc($titulo); ?></h4>
             </div>
 
+
             <!-- Body -->
             <div class="card-body">
+
+                <!--Erros de validação do formulário que foi detectado pelo Model - Flash data message -->
+                <?php if(session()->has('errors_model')) :?>
+
+                    <ul>
+                        <?php foreach(session('errors_model') as $error) : ?>
+                            <li class="text-danger"><?=$error; ?></li>
+                        <?php endforeach?>
+                    </ul>
+
+                <?php endif; ?>
+
+
 
                 <?php echo form_open('admin/usuarios/atualizar/$usuario->id'); ?>
 

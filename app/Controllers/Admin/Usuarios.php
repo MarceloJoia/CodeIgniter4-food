@@ -20,6 +20,9 @@ class Usuarios extends BaseController
             'titulo' => 'Listando os usuários',
             'usuarios' => $this->usuarioModel->findAll(),
         ];
+        //session()->set('sucesso', 'Olá Marcelo que bom ter você conosco!');
+        //session()->remove('sucesso');
+
         return view('Admin/Usuarios/index', $data);
     }
 

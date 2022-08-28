@@ -4,8 +4,6 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Models\UsuarioModel;
-use CodeIgniter\HTTP\Response;
-use Exception;
 
 class Usuarios extends BaseController
 {
@@ -24,7 +22,7 @@ class Usuarios extends BaseController
             'titulo' => 'Listando os usuários',
             'usuarios' => $this->usuarioModel->findAll(),
         ];
-        return view('Admin/Asuarios/index', $data);
+        return view('Admin/Usuarios/index', $data);
     }
 
     public function procurar ()
@@ -48,8 +46,13 @@ class Usuarios extends BaseController
 
     public function show($id = null) {
         $usuario = $this->buscaUsuarioOu404($id);
+        //dd($usuario);
+        $data = [
+            'titulo' => "Detalhando o usuário $usuario->name",
+            'usuario' => $usuario,//chave
+        ];
 
-        dd($usuario);
+        return view('Admin/usuarios/show', $data);
     }
 
     /**

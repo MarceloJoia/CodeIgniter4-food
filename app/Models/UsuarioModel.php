@@ -8,12 +8,38 @@ class UsuarioModel extends Model
 {
     protected $table            = 'usuarios';
     protected $returnType       = 'App\Entities\Usuario';
-    protected $useSoftDeletes   = true;
     protected $allowedFields    = ['name', 'email', 'cpf', 'telefone'];
+    protected $useSoftDeletes   = true;
     protected $useTimestamps    = true;
     protected $createdField     = 'criado_em';
     protected $updatedField     = 'atualizado_em';
     protected $deletedField     = 'deletado_em';
+
+    protected $validationRules = [
+        'name'     => 'required|min_length[4]|max_length[120]',
+        'email'        => 'required|valid_email|is_unique[usuarios.email]',
+        'cpf'        => 'required|exact_length[14]|is_unique[usuarios.cpf]',
+        'password'     => 'required|min_length[6]',
+        'password_confirmatio' => 'required_with[password]|matches[password]',
+    ];
+
+    protected $validationMessages = [
+        'name' => [
+            'required' =>'O campo Nome é obrigatório',
+        ],
+        'email' => [
+            'required' =>'O campo de e-mail é obrigatório',
+            'is_unique' => 'Deslculpe-nos, mas esse e-mail já existe! Tente com um e-mail diferente.',
+        ],
+        'cpf' => [
+            'required' =>'O campo CPF é obrigatório',
+            'is_unique' => 'Deslculpe-nos, mas esse CPF já está cadastrada. Tente recuperar a senha!',
+        ],
+        'telefone' => [
+            'required' =>'Precisamos do Celular para avisar que o seu pedido está a caminho ou tirar dúvidas sobre a localização',
+            'is_unique' => 'Deslculpe-nos, mas esse Celular já está cadastrado.',
+        ],
+    ];
 
     /**
      * @uso controller usuários no método procurar com o autocomplete

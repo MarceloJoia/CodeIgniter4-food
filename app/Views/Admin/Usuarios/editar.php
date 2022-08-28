@@ -22,30 +22,13 @@
 
             <!-- Body -->
             <div class="card-body">
-                <p class="card-text">
-                    <span class="font-weight-bold">Nome: </span>
-                    <?= esc($usuario->name); ?>
-                </p>
-                <p class="card-text">
-                    <span class="font-weight-bold">Email: </span>
-                    <?= esc($usuario->email); ?>
-                </p>
-                <p class="card-text">
-                    <span class="font-weight-bold">Ativo: </span>
-                    <?= $usuario->ativo ? 'Sim' : 'Não'; ?>
-                </p>
-                <p class="card-text">
-                    <span class="font-weight-bold">Perfil: </span>
-                    <?= $usuario->is_admin ? 'Administrador' : 'Cliente'; ?>
-                </p>
-                <p class="card-text">
-                    <span class="font-weight-bold">Criado: </span>
-                    <?= $usuario->criado_em->humanize(); ?>
-                </p>
-                <p class="card-text">
-                    <span class="font-weight-bold">Atualizado: </span>
-                    <?= $usuario->atualizado_em->humanize(); ?>
-                </p>
+
+                <form class="forms-sample">
+
+                    <?=$this->include('Admin/Usuarios/form');?>
+                   
+                </form>
+
             </div>
 
             <!-- Footer -->

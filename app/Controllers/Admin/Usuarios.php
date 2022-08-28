@@ -10,13 +10,11 @@ class Usuarios extends BaseController
 
     private $usuarioModel;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->usuarioModel = new UsuarioModel();
     }
 
-    public function index()
-    {
+    public function index() {
 
         $data = [
             'titulo' => 'Listando os usuários',
@@ -25,8 +23,7 @@ class Usuarios extends BaseController
         return view('Admin/Usuarios/index', $data);
     }
 
-    public function procurar ()
-    {
+    public function procurar () {
         if(!$this->request->isAJAX()){
             exit('Página não encontrada.');
         }
@@ -44,15 +41,35 @@ class Usuarios extends BaseController
         return $this->response->setJSON($retorno);
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function show($id = null) {
         $usuario = $this->buscaUsuarioOu404($id);
+
         //dd($usuario);
+
         $data = [
             'titulo' => "Detalhando o usuário $usuario->name",
             'usuario' => $usuario,//chave
         ];
 
         return view('Admin/usuarios/show', $data);
+    }
+
+    public function editar($id = null) {
+        $usuario = $this->buscaUsuarioOu404($id);
+        //dd($usuario);
+
+        $data = [
+            'titulo' => "Editando o usuário $usuario->name",
+            'usuario' => $usuario,//chave
+        ];
+
+        return view('Admin/usuarios/editar', $data);
     }
 
     /**

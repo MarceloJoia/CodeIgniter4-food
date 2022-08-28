@@ -16,10 +16,34 @@
         <div class="card">
             <div class="card-body">
                 <div class="card-header bg-primary pb-0 pt-4">
+                    <!-- esc() escapa o que está vindo do banco de dados -->
                     <h4 class="card-title text-white"><?= esc($titulo); ?></h4>
                 </div>
 
-                <p class="card-text pt-3"><?= esc($usuario->name); ?></p>
+                <p class="card-text pt-4">
+                    <span class="font-weight-bold">Nome: </span>
+                    <?= esc($usuario->name); ?>
+                </p>
+                <p class="card-text">
+                    <span class="font-weight-bold">Email: </span>
+                    <?=esc($usuario->email); ?>
+                </p>
+                <p class="card-text">
+                    <span class="font-weight-bold">Ativo: </span>
+                    <?=$usuario->ativo ? 'Sim' : 'Não'; ?>
+                </p>
+                <p class="card-text">
+                    <span class="font-weight-bold">Perfil: </span>
+                    <?=$usuario->is_admin ? 'Administrador' : 'Cliente'; ?>
+                </p>
+                <p class="card-text">
+                    <span class="font-weight-bold">Criado: </span>
+                    <?=$usuario->criado_em; ?>
+                </p>
+                <p class="card-text">
+                    <span class="font-weight-bold">Atualizado: </span>
+                    <?=$usuario->atualizado_em; ?>
+                </p>
 
                 <input name="name" value="Alguem" class="bg-success">
 

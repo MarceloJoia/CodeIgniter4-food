@@ -22,7 +22,7 @@
 
                 <!-- Search -->
                 <div class="ui-widget">
-                    <input id="query" name="query" class="form-control bg-light mb-5">
+                    <input id="query" name="query" placeholder="Pesquisar por usuário" class="form-control bg-light mb-5">
                 </div>
 
 
@@ -40,7 +40,10 @@
 
                             <?php foreach ($usuarios as $usuario) : ?>
                                 <tr>
-                                    <td><?= $usuario->name; ?></td>
+                                    <td>
+                                        <a href="<?=site_url("admin/usuarios/show/$usuario->id");?>">
+                                        <?= $usuario->name; ?></a>
+                                    </td>
                                     <td><?= $usuario->email; ?></td>
                                     <td><?= $usuario->cpf; ?></td>
                                     <td><?= ($usuario->ativo ? '<label class="badge badge-primary">Sim</label>' : '<label class="badge badge-danger">Não</label>'); ?></td>

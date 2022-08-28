@@ -15,6 +15,11 @@ class UsuarioModel extends Model
     protected $updatedField     = 'atualizado_em';
     protected $deletedField     = 'deletado_em';
 
+    /**
+     * @uso controller usuários no método procurar com o autocomplete
+     * @param string $term
+     * @return array usuários
+     */
     public function procurar($term)
     {
         if ($term === null) {

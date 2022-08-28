@@ -20,11 +20,6 @@
         <input type="text" class="form-control" name="email" id="email" value="<?= esc($usuario->email); ?>">
     </div>
 
-    
-    <div class="col-md-12">
-        <hr class="pb-3 pt-0">
-        <h3>Acesso do usuário</h3>
-    </div>
     <div class="form-group col-md-6">
         <label for="ativo">Ativo: </label>
         <select name="ativo" class="form-control ">

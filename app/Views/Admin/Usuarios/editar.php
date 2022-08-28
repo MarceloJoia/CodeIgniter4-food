@@ -24,10 +24,10 @@
             <!-- Body -->
             <div class="card-body">
 
-                <form class="forms-sample">
+                <?php echo form_open('admin/usuarios/atualizar/$usuario->id'); ?>
 
                     <?= $this->include('Admin/Usuarios/form'); ?>
-
+                    
                     <a href="<?= site_url("admin/usuarios/show/$usuario->id"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">
                         Voltar
                     </a>
@@ -35,7 +35,7 @@
                         Salvar
                     </button>
 
-                </form>
+                <?=form_close(); ?>
 
             </div>
 

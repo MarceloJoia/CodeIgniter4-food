@@ -271,7 +271,7 @@
                         </div>
                     <?php endif; ?>
 
-                    <!-- Menságem de Erro -->
+                    <!-- Captura os erros de CSRF - Ação não permitida -->
                     <?php if (session()->has('error')) : ?>
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
                             <strong>Erro!</strong> <?=session('error'); ?>

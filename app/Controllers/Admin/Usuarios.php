@@ -63,6 +63,12 @@ class Usuarios extends BaseController
         return view('Admin/usuarios/show', $data);
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function editar($id = null) {
         $usuario = $this->buscaUsuarioOu404($id);
         //dd($usuario);
@@ -74,6 +80,27 @@ class Usuarios extends BaseController
 
         return view('Admin/usuarios/editar', $data);
     }
+
+
+    public function atualizar(int $id = null) {
+
+        if($this->request->getMethod() === 'post') {
+            $usuario = $this->buscaUsuarioOu404($id);
+            $post = $this->request->getPost();
+            //dd($post);
+
+            // Prepara os dados para enviar para o Banco
+            $usuario->fill($post);
+            dd($usuario);
+
+        } 
+        else {
+            /* Não é um post */
+            //return redirect()->back()->with('info', 'Por favor envie um Post!');
+            return redirect()->back();
+        }
+    }
+
 
     /**
      * @param int $id

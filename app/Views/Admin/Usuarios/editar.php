@@ -38,7 +38,7 @@
 
 
 
-                <?php echo form_open('admin/usuarios/atualizar/$usuario->id'); ?>
+                <?php echo form_open("admin/usuarios/atualizar/$usuario->id"); ?>
 
                     <?= $this->include('Admin/Usuarios/form'); ?>
                     

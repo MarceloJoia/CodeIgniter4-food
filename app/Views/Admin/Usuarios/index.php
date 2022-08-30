@@ -25,6 +25,11 @@
                     <input id="query" name="query" placeholder="Pesquisar por usuário" class="form-control bg-light mb-5">
                 </div>
 
+                <!-- Navegação -->
+                <a href="<?= site_url("admin/usuarios/criar"); ?>" class="btn btn-success mr-3 mdi mdi-account-plus float-right mb-5">
+                    Cadastrar
+                </a>
+
 
                 <div class="table-responsive">
                     <table class="table table-hover">

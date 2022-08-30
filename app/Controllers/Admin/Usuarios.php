@@ -3,6 +3,7 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
+use App\Entities\Usuario;
 use App\Models\UsuarioModel;
 
 class Usuarios extends BaseController
@@ -47,6 +48,41 @@ class Usuarios extends BaseController
         return $this->response->setJSON($retorno);
     }
 
+    public function criar ()
+    {
+        $usuario = new Usuario();
+
+        $data = [
+            'titulo' => "Criar novo usuário",
+            'usuario' => $usuario,
+        ];
+
+        return view('Admin/usuarios/criar', $data);
+    }
+
+    public function cadastrar() {
+
+        if ($this->request->getMethod() === 'post') {
+
+            $usuario = new Usuario($this->request->getPost());
+            //dd($usuario);
+
+            if ($this->usuarioModel->protect(false)->save($usuario)) {
+                return redirect()->to(site_url("admin/usuarios/show/" . $this->usuarioModel->getInsertID()))
+                    ->with('sucesso', "Usuário <u>$usuario->name</u>, cadastrado com sucesso.");
+            } else {
+                return redirect()->back()->with('errors_model', $this->usuarioModel->errors())
+                    ->with('atencao', 'Por favor, verifique os erros a baixo!')
+                    ->withInput();
+            }
+        } else {
+            /* Não é um post */
+            //return redirect()->back()->with('info', 'Por favor envie um Post!');
+            return redirect()->back();
+        }
+    }
+
+
     /**
      * Undocumented function
      *
@@ -56,8 +92,6 @@ class Usuarios extends BaseController
     public function show($id = null)
     {
         $usuario = $this->buscaUsuarioOu404($id);
-
-        //dd($usuario);
 
         $data = [
             'titulo' => "Detalhando o usuário $usuario->name",
@@ -92,8 +126,7 @@ class Usuarios extends BaseController
      * @param integer|null $id
      * @return void
      */
-    public function atualizar(int $id = null)
-    {
+    public function atualizar(int $id = null) {
 
         if ($this->request->getMethod() === 'post') {
 

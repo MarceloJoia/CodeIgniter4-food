@@ -70,8 +70,7 @@ class UsuarioModel extends Model
     /**
      * Desabilita a semha para Update se estiver vasia
      */
-    public function dasabilitaValidacaoSenha()
-    {
+    public function dasabilitaValidacaoSenha() {
         unset($this->validationRules['password']);
         unset($this->validationRules['password_confirmatio']);
     }

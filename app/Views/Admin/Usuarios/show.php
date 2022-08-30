@@ -51,7 +51,7 @@
             <!-- Footer -->
             <div class="card-footer bg-light">
 
-                <a href="<?= site_url("admin/usuarios/editar/$usuario->id"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">
+                <a href="<?= site_url("admin/usuarios"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">
                     Voltar
                 </a>
 
@@ -59,7 +59,7 @@
                     Editar
                 </a>
 
-                <a href="<?= site_url("admin/usuarios/editar/$usuario->id"); ?>" class="btn btn-danger btn-sm mr-3 mdi mdi-delete-forever">
+                <a href="<?= site_url("admin/usuarios/delete/$usuario->id"); ?>" class="btn btn-danger btn-sm mr-3 mdi mdi-delete-forever">
                     Excluir
                 </a>
 

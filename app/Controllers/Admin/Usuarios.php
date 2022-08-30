@@ -10,11 +10,13 @@ class Usuarios extends BaseController
 
     private $usuarioModel;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->usuarioModel = new UsuarioModel();
     }
 
-    public function index() {
+    public function index()
+    {
 
         $data = [
             'titulo' => 'Listando os usuários',
@@ -26,15 +28,16 @@ class Usuarios extends BaseController
         return view('Admin/Usuarios/index', $data);
     }
 
-    public function procurar () {
-        if(!$this->request->isAJAX()){
+    public function procurar()
+    {
+        if (!$this->request->isAJAX()) {
             exit('Página não encontrada.');
         }
 
         $usuarios = $this->usuarioModel->procurar($this->request->getGet('term'));
 
         $retorno = [];
-        foreach($usuarios as $usuario){
+        foreach ($usuarios as $usuario) {
             $data['id'] = $usuario->id;
             $data['value'] = $usuario->name;
 
@@ -50,14 +53,15 @@ class Usuarios extends BaseController
      * @param [type] $id
      * @return void
      */
-    public function show($id = null) {
+    public function show($id = null)
+    {
         $usuario = $this->buscaUsuarioOu404($id);
 
         //dd($usuario);
 
         $data = [
             'titulo' => "Detalhando o usuário $usuario->name",
-            'usuario' => $usuario,//chave
+            'usuario' => $usuario, //chave
         ];
 
         return view('Admin/usuarios/show', $data);
@@ -69,32 +73,56 @@ class Usuarios extends BaseController
      * @param [type] $id
      * @return void
      */
-    public function editar($id = null) {
+    public function editar($id = null)
+    {
         $usuario = $this->buscaUsuarioOu404($id);
         //dd($usuario);
 
         $data = [
             'titulo' => "Editando o usuário $usuario->name",
-            'usuario' => $usuario,//chave
+            'usuario' => $usuario, //chave
         ];
 
         return view('Admin/usuarios/editar', $data);
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param integer|null $id
+     * @return void
+     */
+    public function atualizar(int $id = null)
+    {
 
-    public function atualizar(int $id = null) {
+        if ($this->request->getMethod() === 'post') {
 
-        if($this->request->getMethod() === 'post') {
             $usuario = $this->buscaUsuarioOu404($id);
+
             $post = $this->request->getPost();
-            //dd($post);
+
+            if(empty($post['password'])) {
+                $this->usuarioModel->dasabilitaValidacaoSenha();
+                unset($post['password']);
+                unset($post['password_confirmatio']);
+            }
 
             // Prepara os dados para enviar para o Banco
             $usuario->fill($post);
-            dd($usuario);
 
-        } 
-        else {
+            //Verifica se houve mudanças no conteudo a ser feito Update
+            if(!$usuario->hasChanged()) {
+                return redirect()->back()->with('info', "Não houve auteração no usuário $usuario->name!");
+            }
+           
+            if ($this->usuarioModel->protect(false)->save($usuario)) {
+                return redirect()->to(site_url("admin/usuarios/show/$usuario->id"))
+                    ->with('susesso', "Usuário $usuario->name, atualizado com sucesso.");
+            } else {
+                return redirect()->back()->with('errors_model', $this->usuarioModel->errors())
+                    ->with('atencao', 'Por favor, verifique os erros a baixo!');
+            }
+        } else {
             /* Não é um post */
             //return redirect()->back()->with('info', 'Por favor envie um Post!');
             return redirect()->back();
@@ -106,8 +134,9 @@ class Usuarios extends BaseController
      * @param int $id
      * @return objeto usuario
      */
-    private function buscaUsuarioOu404 (int $id = null) {
-        if(!$id || !$usuario = $this->usuarioModel->where('id', $id)->first()) {
+    private function buscaUsuarioOu404(int $id = null)
+    {
+        if (!$id || !$usuario = $this->usuarioModel->where('id', $id)->first()) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Não encontramos o usuário $id");
         }
         return $usuario;

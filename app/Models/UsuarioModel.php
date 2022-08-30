@@ -57,4 +57,12 @@ class UsuarioModel extends Model
             ->get()
             ->getResult();
     }
+
+    /**
+     * Desabilita a semha para Update se estiver vasia
+     */
+    public function dasabilitaValidacaoSenha() {
+        unset($this->validationRules['password']);
+        unset($this->validationRules['password_confirmatio']);
+    }
 }

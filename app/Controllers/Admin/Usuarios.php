@@ -117,7 +117,7 @@ class Usuarios extends BaseController
            
             if ($this->usuarioModel->protect(false)->save($usuario)) {
                 return redirect()->to(site_url("admin/usuarios/show/$usuario->id"))
-                    ->with('susesso', "Usuário $usuario->name, atualizado com sucesso.");
+                    ->with('sucesso', "Usuário <u>$usuario->name</u>, atualizado com sucesso.");
             } else {
                 return redirect()->back()->with('errors_model', $this->usuarioModel->errors())
                     ->with('atencao', 'Por favor, verifique os erros a baixo!')

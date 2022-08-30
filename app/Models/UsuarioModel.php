@@ -26,21 +26,29 @@ class UsuarioModel extends Model
 
     protected $validationMessages = [
         'name' => [
-            'required' =>'O campo Nome é obrigatório',
+            'required' => 'O campo Nome é obrigatório',
         ],
         'email' => [
-            'required' =>'O campo de e-mail é obrigatório',
+            'required' => 'O campo de e-mail é obrigatório',
             'is_unique' => 'Deslculpe-nos, mas esse e-mail já existe! Tente com um e-mail diferente.',
         ],
         'cpf' => [
-            'required' =>'O campo CPF é obrigatório',
+            'required' => 'O campo CPF é obrigatório',
             'is_unique' => 'Deslculpe-nos, mas esse CPF já está cadastrada. Tente recuperar a senha!',
         ],
         'telefone' => [
-            'required' =>'Precisamos do Celular para avisar que o seu pedido está a caminho ou tirar dúvidas sobre a localização',
+            'required' => 'Precisamos do Celular para avisar que o seu pedido está a caminho ou tirar dúvidas sobre a localização',
             'is_unique' => 'Desculpe-nos, mas esse Celular já está cadastrado.',
         ],
     ];
+
+    /** Eventos CallBack
+     * Undocumented variable
+     *
+     * @var array
+     */
+    protected $beforeInsert = ['hashPassword'];
+    protected $beforeUpdate = ['hashPassword'];
 
     /**
      * @uso controller usuários no método procurar com o autocomplete
@@ -52,7 +60,7 @@ class UsuarioModel extends Model
         if ($term === null) {
             return [];
         }
-        
+
         return $this->select('id, name')
             ->like('name', $term)
             ->get()
@@ -62,8 +70,23 @@ class UsuarioModel extends Model
     /**
      * Desabilita a semha para Update se estiver vasia
      */
-    public function dasabilitaValidacaoSenha() {
+    public function dasabilitaValidacaoSenha()
+    {
         unset($this->validationRules['password']);
         unset($this->validationRules['password_confirmatio']);
+    }
+
+    protected function hashPassword(array $data)
+    {
+        //Verificar se está vindo o valor que estou esperando do Controler que está instanciando o modelo
+        if (isset($data['data']['password'])) {
+
+            $data['data']['password_hash'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+            unset($data['data']['password']);
+            unset($data['data']['password_confirmatio']);
+            //dd($data);
+
+            return $data;
+        }
     }
 }

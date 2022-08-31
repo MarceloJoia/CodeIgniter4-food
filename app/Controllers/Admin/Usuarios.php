@@ -89,8 +89,7 @@ class Usuarios extends BaseController
      * @param [type] $id
      * @return void
      */
-    public function show($id = null)
-    {
+    public function show($id = null) {
         $usuario = $this->buscaUsuarioOu404($id);
 
         $data = [
@@ -161,6 +160,22 @@ class Usuarios extends BaseController
             //return redirect()->back()->with('info', 'Por favor envie um Post!');
             return redirect()->back();
         }
+    }
+
+    public function delete($id = null) {
+        $usuario = $this->buscaUsuarioOu404($id);
+
+        if($this->request->getMethod() === 'post') {
+            $this->usuarioModel->delete($id);
+            return redirect()->to(site_url('admin/usuarios'))->with('sucesso',"$usuario->name, excluido com sucesso!");
+        }
+
+        $data = [
+            'titulo' => "Deletar o usuário $usuario->name",
+            'usuario' => $usuario,
+        ];
+
+        return view('Admin/usuarios/delete', $data);
     }
 
 

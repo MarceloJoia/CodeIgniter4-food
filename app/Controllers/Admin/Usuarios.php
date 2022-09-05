@@ -21,7 +21,7 @@ class Usuarios extends BaseController
 
         $data = [
             'titulo' => 'Listando os usuários',
-            'usuarios' => $this->usuarioModel->findAll(),
+            'usuarios' => $this->usuarioModel->withDeleted(true)->findAll(),
         ];
         //session()->set('sucesso', 'Olá Marcelo que bom ter você conosco!');
         //session()->remove('sucesso');
@@ -162,12 +162,19 @@ class Usuarios extends BaseController
         }
     }
 
+    /** Deletando usuários
+     * Undocumented function
+     *
+     * @param [type] $id
+     * @return void
+     */
     public function delete($id = null) {
         $usuario = $this->buscaUsuarioOu404($id);
 
         if($this->request->getMethod() === 'post') {
             $this->usuarioModel->delete($id);
-            return redirect()->to(site_url('admin/usuarios'))->with('sucesso',"$usuario->name, excluido com sucesso!");
+            return redirect()->to(site_url('admin/usuarios'))
+                    ->with('sucesso',"$usuario->name, excluido com sucesso!");
         }
 
         $data = [

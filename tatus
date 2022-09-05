@@ -1,0 +1,191 @@
+[33mcommit e6f62091f9f48fc99a017ba38d5cc6334076376d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Tue Aug 30 23:17:46 2022 -0300
+
+    Excluindo usuário
+
+[33mcommit c5be4fb98c430288cdbfdda7fd6e2d09584ba1bc[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Tue Aug 30 21:51:44 2022 -0300
+
+    Criando Regra personalizada para Validar CPF
+
+[33mcommit dea10683e8bc634fd1fa9b0af27694ee71f15be4[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Tue Aug 30 18:24:06 2022 -0300
+
+    Cadastrando usuário
+
+[33mcommit c4e1d576c02cf9e910ef7444d4b4c083b533e4b2[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Tue Aug 30 17:01:26 2022 -0300
+
+    Criptografando a senha com Model Events
+
+[33mcommit e08904d8d545cae72f353065c582e47b99685d9d[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Mon Aug 29 22:17:41 2022 -0300
+
+    Mantendo os valores nos inputs em caso de erro de validação
+
+[33mcommit a701f2c1bd0d370c7c35b7f07d54e3ce53acc5fd[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Mon Aug 29 21:25:38 2022 -0300
+
+    Salvando as alterações no banco de dados - parte 1
+
+[33mcommit 3339fbabfb4721391e28c666a202164500d1eff7[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Mon Aug 29 19:54:10 2022 -0300
+
+    Processando o formulário de edição
+
+[33mcommit 38ad125197d9586934891903878e6621c5981c5b[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Sun Aug 28 19:33:59 2022 -0300
+
+    Preparando a nossa aplicação para exibir mensagens de Para o usuário
+
+[33mcommit 5aeb39f8eb571a2a6e45a93dac9abc4e347620a0[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Sun Aug 28 18:50:41 2022 -0300
+
+    Trabalhando com validação de formulários
+
+[33mcommit e629ca6b8fdcb9434a85495eced3f0e4cbc70f20[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Sun Aug 28 18:23:35 2022 -0300
+
+    Protegendo a aplicação contra Falsificação de solicitação entre sites (CSRF)
+
+[33mcommit 5efdc78683eb3124403e589b847ef2762e4b61e4[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Sun Aug 28 01:25:58 2022 -0300
+
+    Editando um usuário parte - 3
+
+[33mcommit 2904743dea498d0c0c0957bcc72970202dd698b7[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Sun Aug 28 00:45:15 2022 -0300
+
+    Editando um usuário - parte 2
+
+[33mcommit 67190570163d74c524d58e8292df18663bc8c340[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Sun Aug 28 00:07:12 2022 -0300
+
+    Editando um usuário parte - 1
+
+[33mcommit d2dab16f3246482d017a9e3fe08dceb060e53bbf[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Sat Aug 27 22:12:30 2022 -0300
+
+    Trabalhando na view show - parte 2
+
+[33mcommit ba7ee89f11ade7e196c91e57135864139f2c5a78[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Sat Aug 27 21:57:22 2022 -0300
+
+    Trabalhando na view show - parte 1
+
+[33mcommit 75fadcb6f87ac3a54646710bb42646c106613cd9[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Sat Aug 27 21:13:54 2022 -0300
+
+    Traduzindo o Codeigniter e Trabalhando no método show()
+
+[33mcommit 27d099a149ca1a5a74392da9ed39dc6c526c03e2[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Fri Aug 26 17:43:07 2022 -0300
+
+    Criando o método procurar no controller e model usuários - parte final
+
+[33mcommit ef4fbdf96fea263f427393a8db9d121f7d4c8112[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Fri Aug 26 17:28:00 2022 -0300
+
+    Criando o método procurar no controller e model usuários - parte 1
+
+[33mcommit 18965f9b10bdc027e8887c36bd485ca213fc2b6a[m
+Author: Marcelo Joia <sitejoia@hotmail.com>
+Date:   Fri Aug 26 17:08:45 2022 -0300
+
+    Instalando o plugin autocomplete para listar os usuários
+
+[33mcommit 165c6e341f53f9907f9d6c3707ccb45f7827d9fb[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Wed Aug 24 21:47:27 2022 -0300
+
+    Criando a view para listar os usuários
+
+[33mcommit 243885829b71f7d80ae28484e23f051293838f06[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Wed Aug 24 21:07:09 2022 -0300
+
+    Listando os usuarios do banco de dados
+
+[33mcommit 10daf86abf1989b297bee668adbd3513724ee6fc[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Mon Aug 22 22:27:51 2022 -0300
+
+    Listando os usuarios do banco de dados
+
+[33mcommit c8d6ddbc30a48370d3d24e68007fbd87152744cf[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Sun Aug 21 20:58:51 2022 -0300
+
+    Tabela de usuarios alterada, usuário semeados
+
+[33mcommit 5748db0cd4c8dbf2d3c7d84b8df91a82b77b7f05[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Sun Aug 21 20:41:51 2022 -0300
+
+    Create table users
+
+[33mcommit 38733766cff50a6ec5a925a242f9afb97c090c1e[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Sun Aug 21 20:02:49 2022 -0300
+
+    Extendendo layouts
+
+[33mcommit 4edcdfa6da40da243f3f71b1dd139cad56501403[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Sun Aug 21 19:32:05 2022 -0300
+
+    Preparando o Template Admin
+
+[33mcommit f179dc8a1837b27ddcfc2b2ae1a8451dc551b1fd[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Sun Aug 21 19:14:42 2022 -0300
+
+    Controller Admin e template Admin
+
+[33mcommit 0d11658c488f195d604c3e4307f35b877d89768d[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Sun Aug 21 17:57:28 2022 -0300
+
+    Add cpf in table usuarios
+
+[33mcommit 1ad8c0fd72528c80b90995ecac8e8fdf49f428ee[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Sun Aug 21 17:33:45 2022 -0300
+
+    add column in table
+
+[33mcommit 33d1b1903198ad28d10dba72328af43329338377[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Sat Aug 20 11:43:37 2022 -0300
+
+    Controllers, Models e Seeder criados com sucesso
+
+[33mcommit d7c33fa6cc5a768737f7e4c9d83bcc02bb45c9ee[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Fri Aug 19 13:05:22 2022 -0300
+
+    Rodando a primeira [ php spark migrate ]
+
+[33mcommit 74ef32b80f0eb74b0210cbe37bce0af81c0cf815[m
+Author: MarceloJoia <sitejoia@hotmail.com>
+Date:   Fri Aug 19 12:20:10 2022 -0300
+
+    Fist commit

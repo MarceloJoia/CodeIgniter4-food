@@ -39,6 +39,7 @@
                                 <th>E-mail</th>
                                 <th>CPF</th>
                                 <th>Ativo</th>
+                                <th>Estado</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,12 +47,23 @@
                             <?php foreach ($usuarios as $usuario) : ?>
                                 <tr>
                                     <td>
-                                        <a href="<?=site_url("admin/usuarios/show/$usuario->id");?>">
-                                        <?= $usuario->name; ?></a>
+                                        <a href="<?= site_url("admin/usuarios/show/$usuario->id"); ?>">
+                                            <?= $usuario->name; ?></a>
                                     </td>
                                     <td><?= $usuario->email; ?></td>
                                     <td><?= $usuario->cpf; ?></td>
-                                    <td><?= ($usuario->ativo ? '<label class="badge badge-primary">Sim</label>' : '<label class="badge badge-danger">Não</label>'); ?></td>
+                                    <td><?= ($usuario->ativo && $usuario->deletado_em == null ? '<label class="badge badge-primary">Sim</label>' : '<label class="badge badge-danger">Não</label>'); ?></td>
+                                    <td>
+                                        <?= ($usuario->deletado_em == null ? '<label class="badge badge-primary">Disponivel</label>' : '<label class="badge badge-danger">Excluido</label>'); ?>
+                                        
+                                        <?php if ($usuario->deletado_em != null) : ?>
+                                            <!-- desfazer a exclusão -->
+                                            <a href="<?= site_url("admin/usuarios/desfazerexclusao/$usuario->id"); ?>"
+                                                        class="btn btn-sm btn-success ml-3 mr-3 mdi mdi-account-plus">
+                                                Reativar
+                                            </a>
+                                        <?php endif; ?>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
 

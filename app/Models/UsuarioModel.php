@@ -9,23 +9,21 @@ class UsuarioModel extends Model
     protected $table            = 'usuarios';
     protected $returnType       = 'App\Entities\Usuario';
     protected $allowedFields    = ['name', 'email', 'cpf', 'telefone'];
-    
     //Datas
+    protected $useSoftDeletes   = true;//Não deleta do DataBase [true]
     protected $useTimestamps    = true;
     protected $createdField     = 'criado_em';
     protected $updatedField     = 'atualizado_em';
-    protected $dateFormat     = 'datetime'; // Para usar com o $useSoftDeletes
-    protected $useSoftDeletes   = true;//Nã deleta do DataBase [true]
     protected $deletedField     = 'deletado_em';
-
+    protected $dateFormat     = 'datetime'; // Para usar com o $useSoftDeletes
     //Validações
     protected $validationRules = [
-        'name'     => 'required|min_length[4]|max_length[120]',
+        'name'     => 'required|min_length[3]|max_length[120]',
         'email'    => 'required|valid_email|is_unique[usuarios.email]',
         'cpf'      => 'required|validaCpf|exact_length[14]|is_unique[usuarios.cpf]',
         'telefone' => 'required|min_length[15]|max_length[16]|is_unique[usuarios.telefone]',
         'password' => 'required|min_length[6]',
-        'password_confirmatio' => 'required_with[password]|matches[password]',
+        'password_confirmation' => 'required_with[password]|matches[password]',
     ];
 
     protected $validationMessages = [

@@ -39,29 +39,26 @@
 
                 <!-- Formulário para deletar usuáios -->
                 <?php echo form_open("admin/usuarios/delete/$usuario->id"); ?>
-                    
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong>Atenção!</strong>
-                        Você deseja realmente <strong>deletar</strong> o usuário <strong><?=esc($usuario->name); ?></strong>?
-                    </div>
 
-                    <button type="submit" class="btn btn-danger btn-sm mr-3 mdi mdi-delete">
-                        Deletar
-                    </button>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Atenção!</strong>
+                    Você deseja realmente <strong>deletar</strong> o usuário <strong><?= esc($usuario->name); ?></strong>?
+                </div>
 
-                    <a href="<?= site_url("admin/usuarios/show/$usuario->id"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">
-                        Voltar
-                    </a>
+                <button type="submit" class="btn btn-danger btn-sm mr-3 mdi mdi-delete">
+                    Deletar
+                </button>
+
+                <a href="<?= site_url("admin/usuarios/show/$usuario->id"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">
+                    Voltar
+                </a>
                 <?= form_close(); ?>
 
             </div>
 
-            <!-- Footer -->
+            <!-- Suporte -->
             <div class="card-footer bg-light">
-                <a href="https://api.whatsapp.com/send?phone=5516991502332&text=Estou%20precisando%20de%20ajuda,%20com%20o%20LetsFood!" target="_blank" alt="Joia Marketing" title="Joia Marketing" class="btn btn-link btn-sm mdi mdi-bullhorn">
-                    Precisa de ajuda? Fale com a gente | Joia Marketing
-                </a>
-
+                <?= $this->include("Admin/Util/suporte"); ?>
             </div>
         </div>
     </div>

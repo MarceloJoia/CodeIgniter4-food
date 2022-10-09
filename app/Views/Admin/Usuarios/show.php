@@ -65,9 +65,8 @@
 
                 <hr>
 
-                <a href="https://api.whatsapp.com/send?phone=5516991502332&text=Estou%20precisando%20de%20ajuda,%20com%20o%20LetsFood!" target="_blank" alt="Joia Marketing" title="Joia Marketing" class="btn btn-link btn-sm mdi mdi-bullhorn">
-                    Precisa de ajuda? Fale com a gente!
-                </a>
+                <!-- Suporte -->
+                <?=$this->include("Admin/Util/suporte");?>
 
             </div>
         </div>

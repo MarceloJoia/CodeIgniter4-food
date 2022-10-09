@@ -505,6 +505,7 @@ abstract class BaseModel
     {
         $singleton = is_numeric($id) || is_string($id);
 
+
         if ($this->tempAllowCallbacks) {
             // Call the before event and check for a return
             $eventData = $this->trigger('beforeFind', [
@@ -517,6 +518,7 @@ abstract class BaseModel
                 return $eventData['data'];
             }
         }
+
 
         $eventData = [
             'id'        => $id,

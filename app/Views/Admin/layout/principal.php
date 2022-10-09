@@ -243,13 +243,17 @@
 
                     <!-- Menságem de sucesso -->
                     <?php if (session()->has('sucesso')) : ?>
+
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
                             <strong>Perfeito!</strong> <?=session('sucesso'); ?>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
+
                     <?php endif; ?>
+
+                    
 
                     <!-- Menságem de Informação -->
                     <?php if (session()->has('info')) : ?>

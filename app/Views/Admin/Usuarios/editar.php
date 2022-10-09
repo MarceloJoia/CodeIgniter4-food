@@ -37,35 +37,34 @@
                 <?php endif; ?>
 
 
-
                 <?php echo form_open("admin/usuarios/atualizar/$usuario->id"); ?>
 
                     <?= $this->include('Admin/Usuarios/form'); ?>
+                    <a href="<?= site_url("admin/usuarios/show/$usuario->id"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">
+                         Voltar
+                    </a>
 
-                    <a href="<?= site_url("admin/usuarios/show/$usuario->id"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">Voltar</a>
-
-                <?= form_close(); ?>
+                <?php echo form_close(); ?>
 
             </div>
 
-            <!-- Footer -->
+            <!-- Suporte -->
             <div class="card-footer bg-light">
-                <a href="https://api.whatsapp.com/send?phone=5516991502332&text=Estou%20precisando%20de%20ajuda,%20com%20o%20LetsFood!" target="_blank" alt="Joia Marketing" title="Joia Marketing" class="btn btn-link btn-sm mdi mdi-bullhorn">
-                    Precisa de ajuda? Fale com a gente | Joia Marketing
-                </a>
-
+                <?= $this->include("Admin/Util/suporte"); ?>
             </div>
+
         </div>
     </div>
 </div>
 
-<?= $this->endSection() ?>
+<?php echo $this->endSection(); ?>
+
 
 
 <!-- scripts -->
-<?= $this->section('scripts') ?>
+<?php echo $this->section('scripts'); ?>
 
-<script src="<?= site_url('Admin/vendors/mask/app.js') ?>"></script>
 <script src="<?= site_url('Admin/vendors/mask/jquery.mask.min.js') ?>"></script>
+<script src="<?= site_url('Admin/vendors/mask/app.js'); ?>"></script>
 
-<?= $this->endSection() ?>
+<?php echo $this->endSection(); ?>

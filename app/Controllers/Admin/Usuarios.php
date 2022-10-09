@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Entities\Usuario;
 use App\Models\UsuarioModel;
 
+
 class Usuarios extends BaseController
 {
 
@@ -50,7 +51,7 @@ class Usuarios extends BaseController
     public function criar()
     {
         $usuario = new Usuario();
-
+        //dd($usuario);
         $data = [
             'titulo' => "Criar novo usuário",
             'usuario' => $usuario,
@@ -61,7 +62,6 @@ class Usuarios extends BaseController
 
     public function cadastrar()
     {
-
         if ($this->request->getMethod() === 'post') {
 
             $usuario = new Usuario($this->request->getPost());
@@ -69,7 +69,7 @@ class Usuarios extends BaseController
 
             if ($this->usuarioModel->protect(false)->save($usuario)) {
                 return redirect()->to(site_url("admin/usuarios/show/" . $this->usuarioModel->getInsertID()))
-                    ->with('sucesso', "Usuário <u>$usuario->name</u>, cadastrado com sucesso.");
+                                 ->with('sucesso', "Usuário <u>$usuario->name</u>, cadastrado com sucesso.");
             } else {
                 return redirect()->back()->with('errors_model', $this->usuarioModel->errors())
                     ->with('atencao', 'Por favor, verifique os erros a baixo!')
@@ -116,6 +116,7 @@ class Usuarios extends BaseController
             'titulo' => "Editando o usuário $usuario->name",
             'usuario' => $usuario, //chave
         ];
+        //dd($usuario);
 
         return view('Admin/usuarios/editar', $data);
     }

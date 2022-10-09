@@ -74,17 +74,16 @@ class UsuarioModel extends Model
      */
     public function dasabilitaValidacaoSenha() {
         unset($this->validationRules['password']);
-        unset($this->validationRules['password_confirmatio']);
+        unset($this->validationRules['password_confirmation']);
     }
 
-    protected function hashPassword(array $data)
-    {
+    protected function hashPassword(array $data) {
         //Verificar se está vindo o valor que estou esperando do Controler que está instanciando o modelo
         if (isset($data['data']['password'])) {
 
             $data['data']['password_hash'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
             unset($data['data']['password']);
-            unset($data['data']['password_confirmatio']);
+            unset($data['data']['password_confirmation']);
             //dd($data);
 
             return $data;

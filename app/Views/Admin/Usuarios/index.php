@@ -61,7 +61,7 @@
                                     <?php else :?>
                                         <td>
                                             <a href="<?php echo site_url("admin/usuarios/desfazerexclusao/".$usuario->id); ?>"
-                                                         class="btn btn-sm btn-danger mdi mdi-account-plus"> Ativar
+                                                class="btn btn-sm btn-danger mdi mdi-account-plus"> Ativar
                                             </a>
                                         </td>
                                     <?php endif;?>

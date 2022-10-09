@@ -112,6 +112,10 @@ class Usuarios extends BaseController
         $usuario = $this->buscaUsuarioOu404($id);
         //dd($usuario);
 
+        if($usuario->deletado_em != null) {
+            return redirect()->back()->with('info', "O usuário <b>$usuario->name</b> está desativado, não é possível editar!");
+        }
+
         $data = [
             'titulo' => "Editando o usuário $usuario->name",
             'usuario' => $usuario, //chave
@@ -133,6 +137,10 @@ class Usuarios extends BaseController
         if ($this->request->getMethod() === 'post') {
 
             $usuario = $this->buscaUsuarioOu404($id);
+
+            if($usuario->deletado_em != null) {
+                return redirect()->back()->with('info', "O usuário <b>$usuario->name</b> está desativado!");
+            }
 
             $post = $this->request->getPost();
 
@@ -175,6 +183,10 @@ class Usuarios extends BaseController
     {
         $usuario = $this->buscaUsuarioOu404($id);
 
+        if($usuario->deletado_em != null) {
+            return redirect()->back()->with('info', "O usuário <b>$usuario->name</b> já escontra-se excluido!");
+        }
+
         // Não permiter a exclusão do Admin
         if ($usuario->is_admin) {
             return redirect()->back()->with('info', 'Não é possível excluir um usuário <b>Administrador</b>!');
@@ -196,14 +208,14 @@ class Usuarios extends BaseController
         return view('Admin/usuarios/delete', $data);
     }
 
+
+
     public function desfazerExclusao($id = null) {
         
         $usuario = $this->buscaUsuarioOu404($id);
-        
         if($usuario->deletado_em == null) {
             return redirect()->back()->with('info', 'Esse usuário está ativo!');
         }
-        
         if($this->usuarioModel->ativarUsuario($id)) {
             return redirect()->back()->with('sucesso', "Restauração do usuário bem sucedida!");
         }
@@ -214,6 +226,7 @@ class Usuarios extends BaseController
                 ->withInput();
         }
     }
+
 
 
     /**

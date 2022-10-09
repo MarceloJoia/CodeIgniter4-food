@@ -34,13 +34,14 @@
                 <div class="table-responsive">
                     <table class="table table-hover">
                         <thead>
+                            
                             <tr>
-                                <th>Nome</th>
-                                <th>E-mail</th>
+                                <th>NOME</th>
+                                <th>E-MAIL</th>
                                 <th>CPF</th>
-                                <th>Ativo</th>
-                                <th>Estado</th>
+                                <th>ESTATUS</th>
                             </tr>
+                            
                         </thead>
                         <tbody>
 
@@ -52,18 +53,19 @@
                                     </td>
                                     <td><?= $usuario->email; ?></td>
                                     <td><?= $usuario->cpf; ?></td>
-                                    <td><?= ($usuario->ativo && $usuario->deletado_em == null ? '<label class="badge badge-primary">Sim</label>' : '<label class="badge badge-danger">Não</label>'); ?></td>
-                                    <td>
-                                        <?= ($usuario->deletado_em == null ? '<label class="badge badge-primary">Disponivel</label>' : '<label class="badge badge-danger">Excluido</label>'); ?>
-                                        
-                                        <?php if ($usuario->deletado_em != null) : ?>
-                                            <!-- desfazer a exclusão -->
-                                            <a href="<?= site_url("admin/usuarios/desfazerexclusao/$usuario->id"); ?>"
-                                                        class="btn btn-sm btn-success ml-3 mr-3 mdi mdi-account-plus">
-                                                Reativar
+                                    
+                                    <?php if ( $usuario->ativo && $usuario->deletado_em == null): ?>
+                                        <td>
+                                            <label class="btn btn-sm badge btn-success  mdi mdi-account-plus"> Ativo</label>
+                                        </td>
+                                    <?php else :?>
+                                        <td>
+                                            <a href="<?php echo site_url("admin/usuarios/desfazerexclusao/".$usuario->id); ?>"
+                                                         class="btn btn-sm btn-danger mdi mdi-account-plus"> Ativar
                                             </a>
-                                        <?php endif; ?>
-                                    </td>
+                                        </td>
+                                    <?php endif;?>
+
                                 </tr>
                             <?php endforeach; ?>
 

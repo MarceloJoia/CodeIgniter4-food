@@ -181,7 +181,9 @@ class Usuarios extends BaseController
         }
 
         if ($this->request->getMethod() === 'post') {
+
             $this->usuarioModel->delete($id);
+
             return redirect()->to(site_url('admin/usuarios'))
                 ->with('sucesso', "$usuario->name, excluido com sucesso!");
         }
@@ -194,17 +196,18 @@ class Usuarios extends BaseController
         return view('Admin/usuarios/delete', $data);
     }
 
-    public function desfazerExclusao($id = null)
-    {
+    public function desfazerExclusao($id = null) {
+        
         $usuario = $this->buscaUsuarioOu404($id);
         
         if($usuario->deletado_em == null) {
-            return redirect()->back()->with('info', 'Apenas usuários excluidos podem serem recuperados!');
+            return redirect()->back()->with('info', 'Esse usuário está ativo!');
         }
         
-        if($this->usuarioModel->desfazerExclusao($id)) {
+        if($this->usuarioModel->ativarUsuario($id)) {
             return redirect()->back()->with('sucesso', "Restauração do usuário bem sucedida!");
-        } else {
+        }
+        else {
             return redirect()
                 ->back()->with('errors_model', $this->usuarioModel->errors())
                 ->with('atencao', 'Por favor, verifique os erros a baixo!')

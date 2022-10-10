@@ -1,7 +1,6 @@
 <?php
 
 use App\Models\UsuarioModel;
-use App\Controllers\Admin\Usuarios;
 
 class Autentication {
 
@@ -38,6 +37,50 @@ class Autentication {
         $this->logaUsuario($usuario);
 
         return true;
+    }
+
+    public function logout() {
+        session()->destroy();
+    }
+
+    public function pegaUsuarioLogado () {
+        
+        if($this->usuario === null) {
+            $this->usuario = $this->pegaUsuarioDaSessao();
+        }
+
+        return $this->usuario;
+    }
+
+    /**
+     * @descrição: O método só permite ficar logado na aplicação aquele que ainda existe na base e que esteja ativo.
+     *             Do contrário, será feito o logout do mesmo, caso uma mudançã na sua conta durante a sessão.
+     * 
+     * @user: No filtro loginFiter
+     * @return true se o metodo pegaUsuarioLogado() no for null. Ou seja, se o usuario estiver logado. 
+     */
+    public function estaLogado () {
+        // Enquanto null, não está logado
+        return $this->pegaUsuarioLogado() !== null;
+    }
+
+
+    private function pegaUsuarioDaSessao () {
+
+        if(! session()->has('usuario_id')) {
+            return null;
+        }
+
+        // Instanciamos o model usuário
+        $usuarioModel = new UsuarioModel();
+
+        // Recupera o usuário de acordo com a chave da sessão
+        $usuario = $usuarioModel->find(session()->get('usuario_id'));
+
+        // Só retorna o objeto usuário se o mesmo for encontrado e estiver ativo
+        if($usuario && $usuario->ativo) {
+            return $usuario;
+        }
     }
 
     private function logaUsuario(object $usuario) {

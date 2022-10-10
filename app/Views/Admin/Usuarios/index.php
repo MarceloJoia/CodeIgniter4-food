@@ -34,14 +34,14 @@
                 <div class="table-responsive">
                     <table class="table table-hover">
                         <thead>
-                            
+
                             <tr>
                                 <th>NOME</th>
                                 <th>E-MAIL</th>
                                 <th>CPF</th>
                                 <th>ESTATUS</th>
                             </tr>
-                            
+
                         </thead>
                         <tbody>
 
@@ -53,18 +53,17 @@
                                     </td>
                                     <td><?= $usuario->email; ?></td>
                                     <td><?= $usuario->cpf; ?></td>
-                                    
-                                    <?php if ( $usuario->ativo && $usuario->deletado_em == null): ?>
+
+                                    <?php if ($usuario->ativo && $usuario->deletado_em == null) : ?>
                                         <td>
                                             <label class="btn btn-sm badge btn-success  mdi mdi-account-plus"> Ativo</label>
                                         </td>
-                                    <?php else :?>
+                                    <?php else : ?>
                                         <td>
-                                            <a href="<?php echo site_url("admin/usuarios/desfazerexclusao/".$usuario->id); ?>"
-                                                class="btn btn-sm btn-danger mdi mdi-account-plus"> Ativar
+                                            <a href="<?php echo site_url("admin/usuarios/desfazerexclusao/" . $usuario->id); ?>" class="btn btn-sm btn-danger mdi mdi-account-plus"> Ativar
                                             </a>
                                         </td>
-                                    <?php endif;?>
+                                    <?php endif; ?>
 
                                 </tr>
                             <?php endforeach; ?>
@@ -73,6 +72,11 @@
                     </table>
                 </div>
             </div>
+
+            <div class="card-footer text-muted">
+                <?= $pager->links() ?>
+            </div>
+
         </div>
     </div>
 </div>

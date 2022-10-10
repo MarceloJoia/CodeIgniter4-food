@@ -44,12 +44,12 @@
                 </p>
 
 
-                <?php if($usuario->deletado_em == null) :?>
+                <?php if ($usuario->deletado_em == null) : ?>
                     <p class="card-text">
                         <span class="font-weight-bold">Atualizado: </span>
                         <?= $usuario->atualizado_em->humanize(); ?>
                     </p>
-                <?php else :?>
+                <?php else : ?>
                     <p class="card-text">
                         <span class="font-weight-bold text-danger">Desativado: </span>
                         <?= $usuario->deletado_em->humanize(); ?>
@@ -61,13 +61,11 @@
 
             <!-- Footer -->
             <div class="card-footer bg-light">
+                <a href="<?= site_url("admin/usuarios"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">
+                    Voltar
+                </a>
 
-                
-
-                <?php if($usuario->deletado_em == null) :?>
-                    <a href="<?= site_url("admin/usuarios"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">
-                        Voltar
-                    </a>
+                <?php if ($usuario->deletado_em == null) : ?>
                     <a href="<?= site_url("admin/usuarios/editar/$usuario->id"); ?>" class="btn btn-primary btn-sm mr-3 mdi mdi-pencil">
                         Editar
                     </a>
@@ -76,18 +74,14 @@
                         Excluir
                     </a>
                 <?php else : ?>
-                    <a href="<?= site_url("admin/usuarios"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">
-                        Voltar
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="Ativar o Usuário!" href="<?php echo site_url("admin/usuarios/desfazerexclusao/".$usuario->id); ?>"
-                        class="btn btn-sm btn-danger mdi mdi-account-plus"> Ativar
+                    <a data-toggle="tooltip" data-placement="top" title="Ativar o Usuário!" href="<?php echo site_url("admin/usuarios/desfazerexclusao/" . $usuario->id); ?>" class="btn btn-sm btn-danger mdi mdi-account-plus"> Ativar
                     </a>
                 <?php endif; ?>
 
                 <hr>
 
                 <!-- Suporte -->
-                <?=$this->include("Admin/Util/suporte");?>
+                <?= $this->include("Admin/Util/suporte"); ?>
 
             </div>
         </div>

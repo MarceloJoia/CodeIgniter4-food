@@ -228,7 +228,9 @@ class Usuarios extends BaseController
         }
     }
 
-
+    public function verificaPassword(string $password) {
+        return password_verify($password, $this->password_hash);
+    }
 
     /**
      * @param int $id

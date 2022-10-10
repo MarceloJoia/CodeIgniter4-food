@@ -27,25 +27,22 @@
 
                 <!--Erros de validação do formulário que foi detectado pelo Model - Flash data message -->
                 <?php if (session()->has('errors_model')) : ?>
-
                     <ul>
                         <?php foreach (session('errors_model') as $error) : ?>
                             <li class="text-danger"><?= $error; ?></li>
                         <?php endforeach ?>
                     </ul>
-
                 <?php endif; ?>
 
 
-
                 <?php echo form_open("admin/usuarios/cadastrar"); ?>
+                <?= $this->include('Admin/Usuarios/form'); ?>
 
-                    <?= $this->include('Admin/Usuarios/form'); ?>
-                    <a href="<?= site_url("admin/usuarios"); ?>" class="btn btn-danger btn-sm mr-3 mdi mdi-account-off"><!-- Navegação -->
-                        Cancelar
-                    </a>
-                    
+                <a href="<?= site_url("admin/usuarios"); ?>" class="btn btn-success btn-sm mr-3 mdi mdi-reply">
+                    Voltar
+                </a>
                 <?php echo form_close(); ?>
+                
 
             </div>
 

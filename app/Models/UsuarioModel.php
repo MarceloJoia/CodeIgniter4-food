@@ -98,4 +98,14 @@ class UsuarioModel extends Model
                     ->update();
     }
 
+    /**
+     * @user find first user autentication
+     *
+     * @param string $email
+     * @return Objeto $usuario
+     */
+    public function buscaUsuarioPorEmail(string $email) {
+        return $this->where('email', $email)->first();
+    }
+
 }

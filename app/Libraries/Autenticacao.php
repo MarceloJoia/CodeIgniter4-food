@@ -2,7 +2,7 @@
 
 use App\Models\UsuarioModel;
 
-class Autentication {
+class Autenticacao {
 
     private $usuario;
     

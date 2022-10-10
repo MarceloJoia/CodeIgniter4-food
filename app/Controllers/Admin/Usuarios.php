@@ -5,7 +5,7 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Entities\Usuario;
 use App\Models\UsuarioModel;
-
+use CodeIgniter\Config\Services;
 
 class Usuarios extends BaseController
 {
@@ -17,8 +17,11 @@ class Usuarios extends BaseController
         $this->usuarioModel = new UsuarioModel();
     }
 
-    public function index()
-    {
+    public function index() {
+
+        $usuario = service('autenticacao');
+
+
         $data = [
             'titulo' => 'Listando os usuários',
             'usuarios' => $this->usuarioModel->withDeleted(true)->paginate(10),

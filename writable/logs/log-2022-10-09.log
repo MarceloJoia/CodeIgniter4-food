@@ -10104,3 +10104,63 @@ in APPPATH\Controllers\Admin\Usuarios.php on line 237.
  3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
  4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-09 22:00:26 --> Class 'App\Libraries\Autenticacao' not found
+in APPPATH\Config\Services.php on line 28.
+ 1 SYSTEMPATH\Config\BaseService.php(194): Config\Services::autenticacao(false)
+ 2 APPPATH\Config\Services.php(25): CodeIgniter\Config\BaseService::getSharedInstance('autenticacao')
+ 3 SYSTEMPATH\Common.php(962): Config\Services::autenticacao()
+ 4 APPPATH\Controllers\Admin\Usuarios.php(22): service('autenticacao')
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin\Usuarios->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-09 22:19:39 --> Arquivo inválido: Admin/layout/principal_autenticacao.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/layout/principal_autenticacao.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/layout/principal_autenticacao', [], true)
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Login/novo', [], true)
+ 4 APPPATH\Controllers\Login.php(15): view('Login/novo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Login->novo()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-09 22:22:28 --> Arquivo inválido: Admin/layout/principal_autenticacao.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/layout/principal_autenticacao.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/layout/principal_autenticacao', [], true)
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Login/novo', [], true)
+ 4 APPPATH\Controllers\Login.php(15): view('Login/novo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Login->novo()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-09 22:22:47 --> Arquivo inválido: Admin/layout/principal_autenticacao.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/layout/principal_autenticacao.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/layout/principal_autenticacao', [], true)
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Login/novo', [], true)
+ 4 APPPATH\Controllers\Login.php(15): view('Login/novo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Login->novo()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-09 22:22:49 --> Arquivo inválido: Admin/layout/principal_autenticacao.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/layout/principal_autenticacao.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/layout/principal_autenticacao', [], true)
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Login/novo', [], true)
+ 4 APPPATH\Controllers\Login.php(15): view('Login/novo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Login->novo()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-10-09 22:23:01 --> Arquivo inválido: Admin/layout/principal_autenticacao.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/layout/principal_autenticacao.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Admin/layout/principal_autenticacao', [], true)
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Login/novo', [], true)
+ 4 APPPATH\Controllers\Login.php(15): view('Login/novo', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Login->novo()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

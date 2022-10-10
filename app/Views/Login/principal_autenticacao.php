@@ -25,8 +25,6 @@
   <!-- Essa Section Renderizará os conteúdos espessíficos da View que estender esse layout -->
   <?= $this->renderSection('conteudo') ?>
 
-
-
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->

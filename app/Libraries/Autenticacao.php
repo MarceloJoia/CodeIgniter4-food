@@ -1,6 +1,8 @@
 <?php
 
-use App\Models\UsuarioModel;
+namespace App\Libraries;
+
+use \App\Models\UsuarioModel;
 
 class Autenticacao {
 

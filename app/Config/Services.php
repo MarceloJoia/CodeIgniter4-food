@@ -25,6 +25,6 @@ class Services extends BaseService {
             return static::getSharedInstance('autenticacao');
         }
 
-        return new \App\Libraries\Autenticacao;
+        return new \App\Libraries\autenticacao;
     }
 }

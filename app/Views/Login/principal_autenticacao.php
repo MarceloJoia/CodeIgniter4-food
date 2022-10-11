@@ -21,9 +21,10 @@
 <body>
   <div class="container-scroller">
 
-  
-  <!-- Essa Section Renderizará os conteúdos espessíficos da View que estender esse layout -->
-  <?= $this->renderSection('conteudo') ?>
+
+    <!-- Essa Section Renderizará os conteúdos espessíficos da View que estender esse layout -->
+    <?= $this->renderSection('conteudo') ?>
+
 
     <!-- page-body-wrapper ends -->
   </div>
